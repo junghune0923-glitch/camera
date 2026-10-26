@@ -463,3 +463,6 @@ html,body{overflow:hidden!important;overscroll-behavior:none;scroll-behavior:aut
 
 /* Exposure length is shown in black; capture erases it from left to right. */
 .shutter-duration-display{position:absolute;left:50%;top:69%;bottom:auto;transform:translate(-50%,-50%);width:280px;height:auto;max-width:55vw;z-index:6;color:#333;}.shutter-duration-heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 9px;font-size:10px;}.shutter-duration-value{position:static;display:inline;inset:auto;font-size:12px;}.shutter-exposure-track{position:relative;height:6px;background:#fff;border-radius:1px;box-shadow:0 0 0 1px #00000012;overflow:hidden;}.shutter-exposure-fill{display:block;height:100%;width:35%;background:#181a1b;clip-path:inset(0);transition:width .22s ease;}.shutter-dark .shutter-duration-display{color:#ddd;}.shutter-timer-note{font-size:9px;top:calc(100% + 8px);}@media(max-width:800px){.shutter-duration-display{left:50%;top:57%;bottom:auto;width:210px;height:auto;max-width:65vw;}.shutter-duration-value{font-size:11px;}}
+
+/* Keep the exposure indicator clear of the camera body. */
+.shutter-duration-display{top:calc(69% - 21mm);}@media(max-width:800px){.shutter-duration-display{top:calc(57% - 21mm);}}
